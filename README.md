@@ -10,6 +10,7 @@ Features
 - Large white-on-black display
 - Touchability disabled for reliability
 - Shake to start over
+- Works offline
 
 Screenshot
 ----------
