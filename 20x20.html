@@ -1,24 +1,47 @@
 <!doctype html>
 <html>
   <head>
-    <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/icon.png" />
+
     <style>
       body {
+        margin: 0;
         background: black;
-        color: white;
-        font-size: 300%;
+        color: #999;
+        font-family: Futura-CondensedExtraBold, sans-serif;
+        text-align: center;
+        font-size: 150px;
+        line-height: 300px;
+      }
+      
+      #time {
+        color: #fff;
+        font-size: 180px;
       }
     </style>
     <script>
-      var time = 0
+      onload = function() {
+        var time = 0
+          , slideEl = document.getElementById("slide")
+          , timeEl = document.getElementById("time")
+        
+        document.addEventListener("touchmove", function(e) {
+            e.preventDefault()
+        })
 
-      onload = function update() {
-        document.body.innerHTML = (0|time/20 + 1) + ":" + time++ % 20
-      
-        setTimeout(update, 1000)
+        setInterval(function() {
+          time++
+
+          slideEl.innerHTML = 0|time/20 + 1
+          timeEl.innerHTML  = time % 20
+        }, 1000)
       }
     </script>
   </head>
   <body>
+    <span id="slide">1</span>:<span id="time">0</span>
   </body>
 </html>
