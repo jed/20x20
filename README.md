@@ -8,8 +8,13 @@ Features
 
 - Displays current slide and seconds elapsed
 - Large white-on-black display
-- Touchability disabled to prevent 
+- Touchability disabled for reliability
 - Shake to start over
+
+Screenshot
+----------
+
+![20x20 screenshot](http://s3.amazonaws.com/20x20/screenshot.png)
 
 Installation
 ------------
