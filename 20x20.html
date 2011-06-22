@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0">
+    <style>
+      body {
+        background: black;
+        color: white;
+        font-size: 300%;
+      }
+    </style>
+    <script>
+      var time = 0
+
+      onload = function update() {
+        document.body.innerHTML = (0|time/20 + 1) + ":" + time++ % 20
+      
+        setTimeout(update, 1000)
+      }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
